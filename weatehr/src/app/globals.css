@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+}
+
+h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.unitBtn,
+.homeBtn,
+.subBtn {
+  border: 1px solid black;
+  border-radius: 11px;
+  padding: 10px 20px;
+}
+
+.unitBtn:hover,
+.homeBtn:hover {
+  background-color: lightgray;
+}
+
+.selected {
+  background-color: lightgray;
+}
+
+.loginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.loginText {
+  width: 400px;
+}
+
+.welcomeText {
+  width: 50%;
+  margin: 0 auto 40px;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  gap: 25px;
+}
+
+input {
+  border: 2px solid black;
+  border-radius: 11px;
+  padding: 6px 5px;
+}
+
+.subBtn {
+  background-color: lightgray;
+}
+
+.subBtn:hover {
+  background-color: gray;
+}
+
+.link {
+  display: inline-block;
+}
+
+.weatherContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.unitBtnContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.temp {
+  font-size: 28px;
+}
+
+.searchInfo {
+  margin: 30px auto 0;
+  width: 300px;
+  text-align: center;
+}
