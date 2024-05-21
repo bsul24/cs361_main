@@ -7,14 +7,14 @@ export default function Home() {
   };
   return (
     <main>
-      <div className="loginContainer">
+      {/* <div className="loginContainer">
         <button className="homeBtn">Sign Up</button>
         <button className="homeBtn">Login</button>
         <h2 className="loginText">
           Login to save favorite locations! (We will never contact the email you
           use to sign up with.){" "}
         </h2>
-      </div>
+      </div> */}
       <p className="welcomeText">
         This app is designed to help keep you informed about weather conditions
         so that you can plan your day accordingly. Take advantage of features

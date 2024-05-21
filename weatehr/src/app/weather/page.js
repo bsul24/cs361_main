@@ -11,6 +11,7 @@ export default function Weather() {
   const [formatDate, setFormatDate] = useState("");
   const [formatTime, setFormatTime] = useState("");
   const [tempUnit, setTempUnit] = useState("F");
+  const [searchOn, setSearchOn] = useState(false);
   const searchParams = useSearchParams();
   useEffect(() => {
     const fetchWeatherData = async () => {
@@ -53,6 +54,7 @@ export default function Weather() {
 
   const handleSearch = (query) => {
     document.querySelector("input").value = "";
+    setSearchOn(false);
   };
 
   const handleUnitBtnClick = (e) => {
@@ -65,6 +67,10 @@ export default function Weather() {
       e.target.classList.add("selected");
       document.querySelector(".fahr").classList.remove("selected");
     }
+  };
+
+  const handleSearchEnable = () => {
+    setSearchOn(true);
   };
 
   return (
@@ -103,9 +109,17 @@ export default function Weather() {
           </button>
         </div>
       </div>
-      <div className="searchContainer">
-        <SearchBar onSearch={handleSearch} />
-      </div>
+      {searchOn ? (
+        <div className="searchContainer">
+          <SearchBar onSearch={handleSearch} />
+        </div>
+      ) : (
+        <div className="searchContainer">
+          <button className="subBtn" onClick={handleSearchEnable}>
+            Enable Search
+          </button>
+        </div>
+      )}
     </main>
   );
 }
